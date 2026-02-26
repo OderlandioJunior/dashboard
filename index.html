@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="dashboard-icon.jpeg" type="image/jpeg">
+    <script src="https://kit.fontawesome.com/1cf26eb200.js" crossorigin="anonymous"></script>
+    <script>
+        function clickMenu() {
+            if (itens.style.display == "block") {
+                itens.style.display = "none"
+            }
+            else {
+                itens.style.display = "block"
+            }
+        }
+    </script>
+    <title>Painel de Finanças</title>
+</head>
+<body>
+    <header>
+        <div class="buscar">
+            <label for="buscar"><i class="fa-solid fa-magnifying-glass"></i><input type="text" name="search" id="buscar" placeholder="Search" maxlength="50"></label>
+        </div>
+
+        <div class="user">
+            <i class="fa-regular fa-circle-user"></i>
+            
+        </div>
+    </header>
+    <menu>
+        <i id="burguer" class="fa-solid fa-bars" onclick="clickMenu()"></i><span>Menu</span>
+        <nav id="itens">
+            <ul>
+                <li><i class="fa-solid fa-house"></i><span>Dashboard</span></li>
+                <li><i class="fa-solid fa-cart-shopping"></i><span>Markets</span></li>
+                <li><i class="fa-solid fa-wallet"></i><span>Wallet</span></li>
+                <li><i class="fa-solid fa-gear"></i><span>Settings</span></li>
+            </ul>
+        </nav>
+    </menu>
+    <main>
+        <section class="data">
+            <div class="btc">
+                <h1>BTC Price</h1>
+                <h2>$68,500</h2>
+                <h3>+2,5%</h3>
+            </div>
+            <div class="market">
+                <h1>Market Cap</h1>
+                <h2>$1.3T</h2>
+            </div>
+            <div class="day">
+                <h1>24h Volume</h1>
+                <h2>$95B</h2>
+            </div>
+        </section>
+
+        <section class="chart">
+            <div class="week">
+                <h1>Price Chart (24h)</h1>
+                <div class="gif">
+                    <img src="line_chart_btc.gif" alt="">
+                </div>
+            </div>
+            <div class="week">
+                <h1>Price Chart (7d)</h1>
+                <div class="gif">
+                    <img src="line_chart_btc.gif" alt="">
+                </div>
+            </div>
+        </section>
+
+        <aside>
+            <header class="assets">
+                <h1>Top Assets</h1>
+                <p>Change</p>
+            </header>
+            <div class="coins">
+                <h1>Bitcoin (BTC)</h1>
+                <p>+2.5%</p>
+            </div>
+            <div class="coins">
+                <h1>Ethereum (ETH)</h1>
+                <p>+1.23%</p>
+            </div>
+            <div class="coins">
+                <h1>Ripple (XRP)</h1>
+                <p>-0.55%</p>
+            </div>
+            <div class="coins">
+                <h1>Solana (SOL)</h1>
+                <p>-3.1%</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Ideia de projeto criado por Inteligência Artificial para aperfeiçoar conhecimentos. Estrutura e estilização construida a partir do modelo do projeto.</p>
+    </footer>
+</body>
+</html>

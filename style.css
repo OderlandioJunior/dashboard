@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(30, 30, 35);
+    color: white;
+}
+
+/* Configuração geral de header */
+header {
+    background-color: rgb(45, 45, 45);
+    margin-bottom: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header i {
+    color: rgb(55, 185, 240);
+    padding: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+header i:hover {
+    font-size: 2em;
+    padding: 5px 0px;
+    border-bottom: 3px solid rgb(55, 185, 240);
+}
+
+.buscar {
+    padding: 8px;
+}
+
+.buscar input {
+    background-color: rgb(45, 45, 45);
+    border: none;
+    padding: 5px
+}
+
+.buscar input:focus {
+    outline: none;
+    color: white;
+}
+
+.user {
+    padding: 8px;
+}
+
+/* Configuração geral de menu */
+menu {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+menu > span{
+    margin-left: 5px;
+    padding: 5px;
+    color: white;
+    transition: all .3s;
+}
+
+menu > span:hover {
+    margin-left: 0px;
+    color: rgb(55, 185, 240);
+}
+
+menu > i:hover {
+    cursor: pointer;
+}
+
+span {
+    display: none;
+    margin-left: 5px;
+}
+
+/* Menu hamburguer */
+nav {
+    display: none;
+    margin: 10px;
+    animation: surgir 0.6s ease-out;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+li {
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    transition: all .3s;
+}
+
+li:hover {
+    padding: 0px 5px;
+    color: rgb(55, 185, 240);
+}
+
+/* Configuração do conteúdo */
+.data {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.data div {
+    background-color: rgb(45, 45, 45);
+    margin-top: 0px;
+    margin: 15px;
+    padding: 10px;
+    width: 200px;
+    height: 100px;
+    border-bottom: 3px solid rgb(55, 185, 240);
+    border-radius: 15px;
+}
+
+.data div:hover {
+    background-color: rgb(80, 80, 80);
+    outline: 3px solid rgb(55, 185, 240);
+}
+
+div h1 {
+    text-align: center;
+    font-size: .9em;
+    color: rgb(180, 180, 200);
+    margin-top: 5px;
+}
+
+div h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+div h3 {
+    text-align: left;
+    font-size: .9em;
+    color: rgb(85, 200, 85);
+}
+
+.chart div {
+    background-color: rgb(45, 45, 45);
+    margin: auto;
+    margin-bottom: 30px;
+    height: 50vh;
+    width: 90vw;
+    border-radius: 15px;
+    position: relative;
+}
+
+.chart h1 {
+    text-align: left;
+    padding: 20px;
+}
+
+.chart .gif {
+    width: 80vw;
+    height: 270px;
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    margin: 0;
+}
+
+.chart img {
+    width: 80vw;
+    height: 270px;
+    border-radius: 15px;
+}
+
+aside {
+    background-color: rgb(45, 45, 45);
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.assets h1 {
+    color: rgb(220, 220, 220);
+    font-weight: 400;
+    font-size: 1.6em;
+}
+
+.assets p {
+    color: rgb(180, 180, 200);
+}
+
+aside .coins {
+    margin-bottom: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coins h1 {
+    font-size: 1.1em;
+}
+
+footer {
+    background-color: rgb(45, 45, 45);
+    margin-top: 20px;
+    padding: 10px;
+}
+
+footer p {
+    text-indent: 20px;
+    text-align: center;
+    font-size: .8em;
+}
+
+@media screen and (min-width: 768px) {
+    i#burguer, menu > span {
+        display: none;
+    }
+    
+    span {
+        display: inline-block;
+    }
+
+    nav#itens {
+        display: block !important;
+    }
+
+    ul {
+        flex-direction: row;
+    }
+}
