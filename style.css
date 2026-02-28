@@ -170,7 +170,7 @@ div h3 {
     margin: auto;
     margin-bottom: 30px;
     height: 350px;
-    width: 90vw;
+    width: 458px;
     border-radius: 15px;
     position: relative;
 }
@@ -182,7 +182,7 @@ div h3 {
 
 .chart img {
     /*border: 2px solid red;*/
-    width: 80vw;
+    width: 405px;
     height: 280px;
     position: absolute;
     top: 50px;
@@ -234,14 +234,22 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    section {
+
+    }
+    aside {
+
+    }
     i#burguer, menu > span {
         display: none;
     }
-    
     span {
         display: inline-block;
     }
-
     nav#itens {
         display: block !important;
     }
