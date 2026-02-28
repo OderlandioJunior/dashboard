@@ -125,17 +125,15 @@ li:hover {
 .data {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     cursor: default;
+    margin: 20px 0px;
 }
 
 .data div {
     background-color: rgb(45, 45, 45);
-    margin-top: 0px;
-    margin: 15px;
     padding: 10px;
-    width: 200px;
     height: 100px;
     border-bottom: 3px solid rgb(55, 185, 240);
     border-radius: 15px;
@@ -144,6 +142,7 @@ li:hover {
 .data div:hover {
     background-color: rgb(80, 80, 80);
     outline: 3px solid rgb(55, 185, 240);
+    border: none;
 }
 
 div h1 {
