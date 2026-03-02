@@ -132,12 +132,12 @@ li:hover {
 /* Configuração do conteúdo */
 .data {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
     cursor: default;
     gap: 15px;
-    margin: 20px 0px;
+    margin: 15px 0px;
 }
 
 .data div {
