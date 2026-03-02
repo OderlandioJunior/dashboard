@@ -137,20 +137,21 @@ li:hover {
     align-items: center;
     cursor: default;
     gap: 15px;
+    margin: 20px 0px;
 }
 
 .data div {
     background-color: rgb(45, 45, 45);
     padding: 10px;
     height: 100px;
-    border-bottom: 3px solid rgb(55, 185, 240);
+    border-left: 4px solid rgb(55, 185, 240);
     border-radius: 15px;
+    transition: all .3s;
 }
 
 .data div:hover {
-    background-color: rgb(80, 80, 80);
-    outline: 3px solid rgb(55, 185, 240);
-    border: none;
+    background-color: rgba(55, 185, 240, 0.05);
+    transform: translateY(-5px);
 }
 
 div h1 {
@@ -177,7 +178,7 @@ div h3 {
     background-color: rgb(45, 45, 45);
     margin: auto;
     margin-bottom: 30px;
-    height: 350px;
+    height: 300px;
     width: 80vw;
     border-radius: 15px;
     position: relative;
@@ -191,7 +192,7 @@ div h3 {
 .chart img {
     /*border: 2px solid red;*/
     width: 70vw;
-    height: 280px;
+    height: 230px;
     position: absolute;
     top: 50px;
     left: 25px;
@@ -201,10 +202,16 @@ div h3 {
 aside {
     background-color: rgb(45, 45, 45);
     padding: 10px 20px;
+    height: 400px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: stretch;
+}
+
+aside .assets {
+    padding-bottom: 20px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.05);
 }
 
 .assets h1 {
@@ -223,7 +230,13 @@ aside .coins {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.05);
 }
+
+aside .coins:last-child {
+    border-bottom: none;
+    }
 
 .coins h1 {
     font-size: 1.1em;
@@ -303,6 +316,7 @@ footer p {
         justify-content: space-between;
         gap: 20px;
         width: 100%;
+        margin: 0px;
     }
     .data div {
         flex: 1;
@@ -348,7 +362,6 @@ footer p {
         flex: 1; 
         width: 100%;
         border-radius: 15px;
-        position: relative;
         padding-bottom: 20px;
         min-height: 200px;
     }
